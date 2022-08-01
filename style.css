@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;   
+}
+
+.navbar ul li {
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a {
+    text-decoration:none;
+    color: lightblue;
+    padding: 8px 25px;
+    /* transition: all .5s ease; */
+}
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 850px;
+    justify-content: center;
+    align-content: center;
+    color: lightblue;
+    background-color: black;
+    opacity: .9;
+}
+
+#home {
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    background: url('photo.jpg') no-repeat center center/cover;
+    height: 500px;
+    width: 100%;
+    z-index: -1;
+    opacity: .9;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 1;
+    right: 45%;
+}
+
+.headings {
+    font-family: century;
+    font-size: 400%;
+    text-align: center;
+    margin: 40px 0px;
+    color: lightblue;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: black;
+    opacity: .9;
+    color: lightblue;
+}
+
+#pic {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#pic img {
+    width:575px;
+    height: 400px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+#intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    opacity: .9;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background-color: black;
+}
+.gallery img {
+    width: 360px;
+    height: 250px;
+    margin: 10px;
+}
+
+#services {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: black;
+    opacity: .9;
+}
+
+.row {
+    display: flex;
+    margin: 100px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 450px;
+    border: 1px solid blue;
+    margin: 20px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to top, gray 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+
+.box h1 {
+    font-size: 30px;
+}
+
+.box:hover {
+    background-position: left bottom; 
+    color: blue;
+    border: none;
+    box-shadow: 0 0 20px blue; 
+}
+
+#contact {
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form { 
+    text-align: center;
+    width: 100%;
+}
+
+.input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#msg {
+    width: 20%;
+    padding: 10px;
+    margin-left: 82px;
+    border: 1px solid black;
+    outline: none;
+}
+
+#send {
+    padding: 10px;
+    width: 10%;
+    margin: 10px;
+    border: none;
+    outline: none;
+}
+
+#send:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+/* media query for iphone*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .navbar ul {
+        display:block;
+} 
+    #home {
+        height: 820px;
+} 
+    #home {
+        height: 200px;
+        width: 100%;
+}
+    .headings {
+        font-size: 1.7rem;
+}
+    #pic img {
+        width: 300px;
+        height: 175px;
+        border-radius: 20%;
+        text-align: center;
+        padding: 0px;
+}
+    #pic h1 {
+    margin: 5px;
+}
+    #about {
+    display: block;
+}
+    #about h1 {
+        padding: 20px;
+    }
+    #intro h2 {
+        font-size: 1.6rem;
+}
+    .row {
+        flex-direction: column;
+    }
+    .box {
+        width: 55px;
+        height: 250px;   
+}
+    .box h1 {
+        font-size: 10px;
+}
+    .gallery img {
+        margin: 0;
+        width: 250px;
+        height: 150px;
+}
+    .input {
+        width: 80%;
+}
+    #msg {
+        width: 60%;
+}
+    #send {
+        width: 30%;
+}
+}  
+/* end of media query for iphone */
+
+/* media query for tablet */
+@media screen and (max-width: 850px) {
+    #pic {
+        flex-direction: column;
+        padding: 40px;
+}
+    #pic img {
+        border-radius: 20%;
+}
+    #about {
+        display: block;
+}
+   #intro h2 {
+        text-align: center;
+}
+    .row {
+        justify-content: center;
+    }
+    .box {
+        width: 7rem;
+}
+    .box h1 {
+        font-size: 20px;
+}
+}
+/* end of media query for tablet */
